@@ -1,0 +1,42 @@
+
+<% if @books %>
+<% for book in @books %>
+
+<h1><%= book.TitleArticle %> <%= book.Title %>: <%= book.SubTitle %></h1>
+<h2>by <%= book.AuthorFirstName %> <%= book.AuthorLastName %></h2>
+
+<p>ISBN:					<%= book.ISBN %>
+<br />Format:				<%= book.Format %>
+<br />FormatEditionName:	<%= book.FormatEditionName %>
+<br />Edition:				<%= book.Edition %>
+<br />EditionNumber:		<%= book.EditionNumber %>
+<br />PublisherCompanyName: <%= book.PublisherCompanyName %>
+<br />PublisherDate:		<%= book.PublisherDate %>
+<br />Pages:				<%= book.Pages %>
+<br />Illustrated:			<%= book.Illustrated %>
+<br />Price:				<%= book.Price %>
+<br />IsAdult:				<%= book.IsAdult %>
+<br />IsFiction:			<%= book.IsFiction %>
+<br />TitleArticle:			<%= book.TitleArticle %>
+<br />Title:				<%= book.Title %>
+<br />SubTitle:				<%= book.SubTitle %>
+<br />LanguageName:			<%= book.LanguageName %>
+<br />Keywords:				<%= book.Keywords %>
+<br />Priority:				<%= book.Priority %>
+<br />LastUpdatedTS:		<%= book.LastUpdatedTS %>
+<br />VolumeNumber:			<%= book.VolumeNumber %>
+<br />AuthorFirstName:		<%= book.AuthorFirstName %>
+<br />AuthorLastName:		<%= book.AuthorLastName %></p>
+<p>
+  <%= link_to 'Show', {:controller => 'books', :action => 'show', :id => book.id} %>
+  <%= link_to 'Edit', {:controller => 'books', :action => 'edit', :id => book.id} %>
+</p>
+
+<% end %>
+<p>
+<%= paginate @books %>
+</p>
+<% end %>
+<p>
+	<%= link_to 'Back to books', {:action => 'index'} %>
+</p>

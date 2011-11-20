@@ -1,0 +1,29 @@
+<h2>Search by ISBN</h2>
+<%= form_tag(:action => "index", :method => "get") do %>
+	<%= label_tag(:q, "Search for:") %>
+	<%= text_field_tag(:q) %>
+	<%= submit_tag("Search") %>
+	<%= hidden_field_tag(:type, "ISBN") %>
+<% end %>
+<br />
+<hr />
+
+<h2>Search by Full Title</h2>
+<%= form_tag(:action => "index", :method => "get") do %>
+	<%= label_tag(:q, "Search for:") %>
+	<%= text_field_tag(:q) %>
+	<%= text_field_tag(:q_prime) %>
+	<%= submit_tag("Search") %>
+	<%= hidden_field_tag(:type, "FullTitle") %>
+<% end %>
+<br />
+<hr />
+
+<h2>Search by Author Name</h2>
+<%= form_tag(:action => "index", :method => "get") do %>
+	<%= label_tag(:q, "Search for:") %>
+	<%= text_field_tag(:q) %>
+	<%= text_field_tag(:q_prime) %>
+	<%= submit_tag("Search") %>
+	<%= hidden_field_tag(:type, "Author") %>
+<% end %>

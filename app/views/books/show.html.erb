@@ -1,0 +1,121 @@
+<p id="notice"><%= notice %></p>
+
+<% if @reviews %>
+  <% @reviews.each do |r| %>
+    <%= link_to r.title, r %>
+  <% end %>
+<% end %>
+
+<p>
+  <b>Isbn:</b>
+  <%= @book.ISBN %>
+</p>
+
+<p>
+  <b>Format:</b>
+  <%= @book.Format %>
+</p>
+
+<p>
+  <b>Formateditionname:</b>
+  <%= @book.FormatEditionName %>
+</p>
+
+<p>
+  <b>Edition:</b>
+  <%= @book.Edition %>
+</p>
+
+<p>
+  <b>Editionnumber:</b>
+  <%= @book.EditionNumber %>
+</p>
+
+<p>
+  <b>Publishercompanyname:</b>
+  <%= @book.PublisherCompanyName %>
+</p>
+
+<p>
+  <b>Publisherdate:</b>
+  <%= @book.PublisherDate %>
+</p>
+
+<p>
+  <b>Pages:</b>
+  <%= @book.Pages %>
+</p>
+
+<p>
+  <b>Illustrated:</b>
+  <%= @book.Illustrated %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @book.Price %>
+</p>
+
+<p>
+  <b>Isadult:</b>
+  <%= @book.IsAdult %>
+</p>
+
+<p>
+  <b>Isfiction:</b>
+  <%= @book.IsFiction %>
+</p>
+
+<p>
+  <b>Titlearticle:</b>
+  <%= @book.TitleArticle %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @book.Title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%= @book.SubTitle %>
+</p>
+
+<p>
+  <b>Languagename:</b>
+  <%= @book.LanguageName %>
+</p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @book.Keywords %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%= @book.Priority %>
+</p>
+
+<p>
+  <b>Lastupdatedts:</b>
+  <%= @book.LastUpdatedTS %>
+</p>
+
+<p>
+  <b>Volumenumber:</b>
+  <%= @book.VolumeNumber %>
+</p>
+
+<p>
+  <b>Authorfirstname:</b>
+  <%= @book.AuthorFirstName %>
+</p>
+
+<p>
+  <b>Authorlastname:</b>
+  <%= @book.AuthorLastName %>
+</p>
+
+<%= link_to 'Review me!', :controller => 'reviews', :action => 'new', :book_id => @book.id %> |
+<%= link_to 'Edit', :controller => 'books', :action => 'edit', :id => @book.id %> |
+<%= link_to 'Back', books_path %>

@@ -1,0 +1,105 @@
+<%= form_for @book, :url => { :action => "edit" } do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ISBN %><br />
+    <%= f.text_field :ISBN %>
+  </div>
+  <div class="field">
+    <%= f.label :Format %><br />
+    <%= f.text_field :Format %>
+  </div>
+  <div class="field">
+    <%= f.label :FormatEditionName %><br />
+    <%= f.text_field :FormatEditionName %>
+  </div>
+  <div class="field">
+    <%= f.label :Edition %><br />
+    <%= f.text_field :Edition %>
+  </div>
+  <div class="field">
+    <%= f.label :EditionNumber %><br />
+    <%= f.text_field :EditionNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :PublisherCompanyName %><br />
+    <%= f.text_field :PublisherCompanyName %>
+  </div>
+  <div class="field">
+    <%= f.label :PublisherDate %><br />
+    <%= f.date_select :PublisherDate %>
+  </div>
+  <div class="field">
+    <%= f.label :Pages %><br />
+    <%= f.text_field :Pages %>
+  </div>
+  <div class="field">
+    <%= f.label :Illustrated %><br />
+    <%= f.check_box :Illustrated %>
+  </div>
+  <div class="field">
+    <%= f.label :Price %><br />
+    <%= f.text_field :Price %>
+  </div>
+  <div class="field">
+    <%= f.label :IsAdult %><br />
+    <%= f.check_box :IsAdult %>
+  </div>
+  <div class="field">
+    <%= f.label :IsFiction %><br />
+    <%= f.check_box :IsFiction %>
+  </div>
+  <div class="field">
+    <%= f.label :TitleArticle %><br />
+    <%= f.text_field :TitleArticle %>
+  </div>
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :SubTitle %><br />
+    <%= f.text_field :SubTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :LanguageName %><br />
+    <%= f.text_field :LanguageName %>
+  </div>
+  <div class="field">
+    <%= f.label :Keywords %><br />
+    <%= f.text_field :Keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :Priority %><br />
+    <%= f.number_field :Priority %>
+  </div>
+  <div class="field">
+    <%= f.label :LastUpdatedTS %><br />
+    <%= f.date_select :LastUpdatedTS %>
+  </div>
+  <div class="field">
+    <%= f.label :VolumeNumber %><br />
+    <%= f.number_field :VolumeNumber %>
+  </div>
+  <div class="field">
+    <%= f.label :AuthorFirstName %><br />
+    <%= f.text_field :AuthorFirstName %>
+  </div>
+  <div class="field">
+    <%= f.label :AuthorLastName %><br />
+    <%= f.text_field :AuthorLastName %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

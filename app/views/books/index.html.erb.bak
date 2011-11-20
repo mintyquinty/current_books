@@ -1,0 +1,69 @@
+<h1>Listing books</h1>
+
+<table>
+  <tr>
+    <th>Isbn</th>
+    <th>Format</th>
+    <th>Formateditionname</th>
+    <th>Edition</th>
+    <th>Editionnumber</th>
+    <th>Publishercompanyname</th>
+    <th>Publisherdate</th>
+    <th>Pages</th>
+    <th>Illustrated</th>
+    <th>Price</th>
+    <th>Isadult</th>
+    <th>Isfiction</th>
+    <th>Titlearticle</th>
+    <th>Title</th>
+    <th>Subtitle</th>
+    <th>Languagename</th>
+    <th>Keywords</th>
+    <th>Priority</th>
+    <th>Lastupdatedts</th>
+    <th>Volumenumber</th>
+    <th>Authorfirstname</th>
+    <th>Authorlastname</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book.ISBN %></td>
+    <td><%= book.Format %></td>
+    <td><%= book.FormatEditionName %></td>
+    <td><%= book.Edition %></td>
+    <td><%= book.EditionNumber %></td>
+    <td><%= book.PublisherCompanyName %></td>
+    <td><%= book.PublisherDate %></td>
+    <td><%= book.Pages %></td>
+    <td><%= book.Illustrated %></td>
+    <td><%= book.Price %></td>
+    <td><%= book.IsAdult %></td>
+    <td><%= book.IsFiction %></td>
+    <td><%= book.TitleArticle %></td>
+    <td><%= book.Title %></td>
+    <td><%= book.SubTitle %></td>
+    <td><%= book.LanguageName %></td>
+    <td><%= book.Keywords %></td>
+    <td><%= book.Priority %></td>
+    <td><%= book.LastUpdatedTS %></td>
+    <td><%= book.VolumeNumber %></td>
+    <td><%= book.AuthorFirstName %></td>
+    <td><%= book.AuthorLastName %></td>
+    <td><%= link_to 'Show', book %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<p>
+<%= paginate @books %>
+</p>
+
+<br />
+
+<%= link_to 'New Book', new_book_path %>

@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ISBN: MyString
+  Format: MyString
+  FormatEditionName: MyString
+  Edition: MyString
+  EditionNumber: MyString
+  PublisherCompanyName: MyString
+  PublisherDate: 2011-11-19
+  Pages: MyString
+  Illustrated: false
+  Price: 1.5
+  IsAdult: false
+  IsFiction: false
+  TitleArticle: MyString
+  Title: MyString
+  SubTitle: MyString
+  LanguageName: MyString
+  Keywords: MyString
+  Priority: 1
+  LastUpdatedTS: 2011-11-19 17:25:51
+  VolumeNumber: 1
+  AuthorFirstName: MyString
+  AuthorLastName: MyString
+
+two:
+  ISBN: MyString
+  Format: MyString
+  FormatEditionName: MyString
+  Edition: MyString
+  EditionNumber: MyString
+  PublisherCompanyName: MyString
+  PublisherDate: 2011-11-19
+  Pages: MyString
+  Illustrated: false
+  Price: 1.5
+  IsAdult: false
+  IsFiction: false
+  TitleArticle: MyString
+  Title: MyString
+  SubTitle: MyString
+  LanguageName: MyString
+  Keywords: MyString
+  Priority: 1
+  LastUpdatedTS: 2011-11-19 17:25:51
+  VolumeNumber: 1
+  AuthorFirstName: MyString
+  AuthorLastName: MyString
