@@ -19,17 +19,6 @@
     <%= f.label :content %><br />
     <%= f.text_area :content %>
   </div>
-  
-  <div class="field">rate it!<br />
-    <% ['1','2','3','4','5','6','7','8','9','10'].each do |r| %>
-      <div style="width: 20px; float: left; text-align: center;">
-         <%= radio_button_tag 'rating', r, @review.rating == r %><br />
-         <%= label_tag "rating_#{r}", r %>
-      </div>
-    <% end %>
-  </div>
-<br clear="all" />
-
   <div class="actions">
     <%= f.submit %>
   </div>

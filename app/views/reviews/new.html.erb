@@ -10,6 +10,17 @@
 <br />
   <%= f.hidden_field :book_id, {:value => @book.id} %>
 <br />
+
+  <div class="field">rate it!<br />
+   <% ['1','2','3','4','5','6','7','8','9','10'].each do |r| %>
+      <div style="width: 20px; float: left; text-align: center;">
+        <%= radio_button_tag 'review[rating]', r, @review == r %><br />
+        <%= label_tag "rating_#{r}", r %>
+      </div>
+    <% end %>
+  </div>
+<br clear="all" />
+
   <%= f.submit %>
 
 <% end %>

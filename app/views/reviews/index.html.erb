@@ -4,15 +4,18 @@
   <tr>
     <th>Title</th>
     <th>Content</th>
+    <th>Book</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @reviews.each do |review| %>
+  <% book = Book.find(review.book_id) %>
   <tr>
     <td><%= review.title %></td>
     <td><%= review.content %></td>
+    <td><%= link_to book.Title, :controller => 'books', :action => 'show', :id => book.id %></td>
     <td><%= link_to 'Show', review %></td>
     <td><%= link_to 'Edit', edit_review_path(review) %></td>
     <td><%= link_to 'Destroy', review, confirm: 'Are you sure?', method: :delete %></td>

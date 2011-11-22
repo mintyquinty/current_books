@@ -10,6 +10,11 @@
   <%= @review.content %>
 </p>
 
+<p>
+  <b>Rating:</b>
+  <%= @review.rating %>
+</p>
+    
 
 <%= link_to 'Edit', edit_review_path(@review) %> |
 <%= link_to 'Back', reviews_path %>
